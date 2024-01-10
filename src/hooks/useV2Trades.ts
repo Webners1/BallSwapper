@@ -1,4 +1,4 @@
-import { Currency, CurrencyAmount, Trade, TradeType } from '@sushiswap/core-sdk'
+import { Currency, CurrencyAmount, Trade, TradeType } from '@core-sdk'
 import { BETTER_TRADE_LESS_HOPS_THRESHOLD } from 'app/constants'
 import { isTradeBetter } from 'app/functions/trade'
 import { useMemo } from 'react'

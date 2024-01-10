@@ -1,6 +1,6 @@
 import { MaxUint256 } from '@ethersproject/constants'
 import { TransactionResponse } from '@ethersproject/providers'
-import { Currency, CurrencyAmount, Percent, ROUTER_ADDRESS, Trade as V2Trade, TradeType } from '@sushiswap/core-sdk'
+import { Currency, CurrencyAmount, Percent, ROUTER_ADDRESS, Trade as V2Trade, TradeType } from '@core-sdk'
 import { calculateGasMargin } from 'app/functions/trade'
 import { useActiveWeb3React } from 'app/services/web3'
 import { useHasPendingApproval, useTransactionAdder } from 'app/state/transactions/hooks'
@@ -115,8 +115,8 @@ export function useApproveCallbackFromTrade(
           ? '0x1c78868884F83CCCcB6F760921bF038236D67993'
           : chainId == 56
           ? '0x9b9577d046cfA15d5D7cFADeB562D3f589357b73'
-      //@ts-ignore
-          : ROUTER_ADDRESS[chainId]
+          : //@ts-ignore
+            ROUTER_ADDRESS[chainId]
         : undefined
       : undefined
   )

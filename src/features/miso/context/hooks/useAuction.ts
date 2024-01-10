@@ -1,5 +1,5 @@
 import { AddressZero } from '@ethersproject/constants'
-import { Token } from '@sushiswap/core-sdk'
+import { Token } from '@core-sdk'
 import { useAuctionDocuments } from 'app/features/miso/context/hooks/useAuctionDocuments'
 import { useAuctionEnded } from 'app/features/miso/context/hooks/useAuctionEnded'
 import {
@@ -167,9 +167,7 @@ export const useAuction = (address?: string, owner?: string) => {
           auctionInfo.tokenInfo.symbol,
           auctionInfo.tokenInfo.name
         ),
-        liquidityToken: lpTokenAddress
-          ? new Token(chainId, lpTokenAddress, 18, 'BSP', 'Ballswap')
-          : undefined,
+        liquidityToken: lpTokenAddress ? new Token(chainId, lpTokenAddress, 18, 'BSP', 'Ballswap') : undefined,
         paymentToken,
         auctionInfo,
         marketInfo,

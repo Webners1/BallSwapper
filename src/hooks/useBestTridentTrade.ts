@@ -1,13 +1,5 @@
 import { BigNumber } from '@ethersproject/bignumber'
-import {
-  ChainId,
-  Currency,
-  CurrencyAmount,
-  JSBI,
-  Trade as LegacyTrade,
-  TradeType,
-  WNATIVE,
-} from '@sushiswap/core-sdk'
+import { ChainId, Currency, CurrencyAmount, JSBI, Trade as LegacyTrade, TradeType, WNATIVE } from '@core-sdk'
 import {
   ConstantProductPool,
   convertTinesSingleRouteToLegacyRoute,
@@ -177,7 +169,7 @@ export function useBestTridentTrade(
             const priceImpact = legacyRoute.priceImpact
             dispatch(setRouteInfo({ info: { chainId, allowedPools: legacyPools, route: legacyRoute, mode: 'single' } }))
             // setRoutingInfo({ chainId, allowedPools: legacyPools, route: legacyRoute, mode: 'single' })
-          //@ts-ignore
+            //@ts-ignore
             const route = convertTinesSingleRouteToLegacyRoute(legacyRoute, legacyPools, currencyIn, currencyOut)
 
             try {
@@ -231,7 +223,7 @@ export function useBestTridentTrade(
             const priceImpact = legacyRoute.priceImpact
             dispatch(setRouteInfo({ info: { chainId, allowedPools: legacyPools, route: legacyRoute, mode: 'single' } }))
             // setRoutingInfo({ chainId, allowedPools: legacyPools, route: legacyRoute, mode: 'single' })
-          //@ts-ignore
+            //@ts-ignore
             const route = convertTinesSingleRouteToLegacyRoute(legacyRoute, legacyPools, currencyIn, currencyOut)
             try {
               return {

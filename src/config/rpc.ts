@@ -1,4 +1,4 @@
-import { ChainId } from '@sushiswap/core-sdk'
+import { ChainId } from '@core-sdk'
 
 const RPC = {
   [ChainId.ETHEREUM]: 'https://api.sushirelay.com/v1',
@@ -36,6 +36,7 @@ const RPC = {
   [ChainId.METIS]: 'https://andromeda.metis.io/?owner=1088',
   [ChainId.ARBITRUM_NOVA]: 'https://a4ba.arbitrum.io/rpc',
   [ChainId.BOBA_AVAX]: 'https://avax.boba.network',
+  [7001]: 'https://zetachain-athens-evm.blockpi.network/v1/rpc/public',
 }
 
 export default RPC

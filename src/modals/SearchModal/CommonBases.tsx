@@ -1,6 +1,6 @@
 import { t } from '@lingui/macro'
 import { useLingui } from '@lingui/react'
-import { Currency } from '@sushiswap/core-sdk'
+import { Currency } from '@core-sdk'
 import Button from 'app/components/Button'
 import { CurrencyLogo } from 'app/components/CurrencyLogo'
 import QuestionHelper from 'app/components/QuestionHelper'
@@ -16,6 +16,7 @@ const CommonBases: FC = () => {
   const { i18n } = useLingui()
   const { currency: selectedCurrency, onSelect } = useCurrencyModalContext()
   const bases = typeof chainId !== 'undefined' ? COMMON_BASES[chainId] ?? [] : []
+  console.log('__________bases', bases)
 
   if (bases.length === 0) return <></>
 

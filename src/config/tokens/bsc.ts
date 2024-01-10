@@ -1,4 +1,4 @@
-import { ChainId, Token } from '@sushiswap/core-sdk'
+import { ChainId, Token } from '@core-sdk'
 
 export const DAI = new Token(ChainId.BSC, '0x1AF3F329e8BE154074D8769D1FFa4eE058B1DBc3', 18, 'DAI', 'Dai Stablecoin')
 export const USD = new Token(ChainId.BSC, '0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56', 18, 'BUSD', 'Binance USD')
@@ -13,21 +13,9 @@ export const MIM = new Token(
   'MIM',
   'Magic Internet Money'
 )
-export const BTB = new Token(
-  ChainId.BSC,
-  '0x374c1135911602a13ee041e6e6e848a14fa62320',
-  18,
-  'BTB',
-  'BitBall'
-)
+export const BTB = new Token(ChainId.BSC, '0x374c1135911602a13ee041e6e6e848a14fa62320', 18, 'BTB', 'BitBall')
 
-export const BSP = new Token(
-  ChainId.BSC,
-  '0xA7748F52273E11C0Cb2EdFa5128385453740ce20',
-  18,
-  'BSP',
-  'BallSwap'
-)
+export const BSP = new Token(ChainId.BSC, '0xA7748F52273E11C0Cb2EdFa5128385453740ce20', 18, 'BSP', 'BallSwap')
 
 export const MEMELON = new Token(
   ChainId.BSC,
@@ -37,13 +25,7 @@ export const MEMELON = new Token(
   'MEME ELON DOGE FLOKI'
 )
 
-export const BTRS = new Token(
-  ChainId.BSC,
-  '0xc8f531700971fd1da43a52912ea53fc8da3b1b00',
-  18,
-  'BTRS',
-  'BitBall Treasure'
-)
+export const BTRS = new Token(ChainId.BSC, '0xc8f531700971fd1da43a52912ea53fc8da3b1b00', 18, 'BTRS', 'BitBall Treasure')
 export const BART = new Token(
   ChainId.BSC,
   '0x721692d13fb70f499e8678ede56bb45e4e320f48',

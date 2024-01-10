@@ -1,7 +1,7 @@
 import { CheckIcon, CogIcon } from '@heroicons/react/outline'
 import { t } from '@lingui/macro'
 import { useLingui } from '@lingui/react'
-import { Percent } from '@sushiswap/core-sdk'
+import { Percent } from '@core-sdk'
 import Button from 'app/components/Button'
 import CloseIcon from 'app/components/CloseIcon'
 import HeadlessUiModal from 'app/components/Modal/HeadlessUIModal'
@@ -102,7 +102,6 @@ const SettingsTab: FC<SettingsTabProps> = ({ placeholderSlippage, className, tri
                 </div>
               )}
               {/* // @ts-ignore TYPE NEEDS FIXING*/}
-             
             </div>
           </div>
         }

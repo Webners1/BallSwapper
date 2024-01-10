@@ -1,6 +1,6 @@
 import { t } from '@lingui/macro'
 import { useLingui } from '@lingui/react'
-import { ChainId } from '@sushiswap/core-sdk'
+import { ChainId } from '@core-sdk'
 import HeadlessUiModal from 'app/components/Modal/HeadlessUIModal'
 import Typography from 'app/components/Typography'
 import { NETWORK_ICON, NETWORK_LABEL } from 'app/config/networks'
@@ -123,6 +123,17 @@ export const SUPPORTED_NETWORKS: Record<
     },
     rpcUrls: ['https://polygon-rpc.com'], // ['https://matic-mainnet.chainstacklabs.com/'],
     blockExplorerUrls: ['https://polygonscan.com'],
+  },
+  [7001]: {
+    chainId: '0x1b59',
+    chainName: 'opBNB',
+    nativeCurrency: {
+      name: 'BNB',
+      symbol: 'BNB',
+      decimals: 18,
+    },
+    rpcUrls: ['https://zetachain-athens-evm.blockpi.network/v1/rpc/public'], // ['https://matic-mainnet.chainstacklabs.com/'],
+    blockExplorerUrls: ['https://explorer.zetachain.com/'],
   },
   // [ChainId.HECO]: {
   //   chainId: '0x80',
@@ -346,6 +357,7 @@ const NetworkModal: FC<{ switchNetwork: (targetChain: number) => void }> = ({ sw
             // ChainId.MOONBEAM,
             // ChainId.FUSE,
             ChainId.BSC,
+            7001,
             // ChainId.KAVA,
             // ChainId.METIS,
             // ChainId.TELOS,

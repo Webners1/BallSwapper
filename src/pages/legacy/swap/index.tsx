@@ -1,7 +1,7 @@
 import { ArrowDownIcon } from '@heroicons/react/solid'
 import { t } from '@lingui/macro'
 import { useLingui } from '@lingui/react'
-import { Currency, JSBI, Token, Trade as V2Trade, TradeType } from '@sushiswap/core-sdk'
+import { Currency, JSBI, Token, Trade as V2Trade, TradeType } from '@core-sdk'
 import Banner from 'app/components/Banner'
 import Button from 'app/components/Button'
 import RecipientField from 'app/components/RecipientField'
@@ -52,7 +52,7 @@ const Swap = ({ banners }: SwapProps) => {
     useCurrency(loadedUrlParams?.inputCurrencyId),
     useCurrency(loadedUrlParams?.outputCurrencyId),
   ]
-console.log("output",loadedUrlParams?.outputCurrencyId)
+  console.log('output', loadedUrlParams?.outputCurrencyId)
   const [dismissTokenWarning, setDismissTokenWarning] = useState<boolean>(false)
   const urlLoadedTokens: Token[] = useMemo(
     () => [loadedInputCurrency, loadedOutputCurrency]?.filter((c): c is Token => c?.isToken ?? false) ?? [],

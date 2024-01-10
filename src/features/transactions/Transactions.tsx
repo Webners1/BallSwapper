@@ -1,7 +1,7 @@
 import { ArrowDownIcon, ArrowUpIcon } from '@heroicons/react/solid'
 import { t } from '@lingui/macro'
 import { useLingui } from '@lingui/react'
-import { ChainId } from '@sushiswap/core-sdk'
+import { ChainId } from '@core-sdk'
 import { LoadingSpinner } from 'app/components/LoadingSpinner'
 import {
   TABLE_TABLE_CLASSNAME,
@@ -84,7 +84,7 @@ const _Transactions: FC<TransactionFetcherState> = ({ chainId = ChainId.ETHEREUM
         <table {...getTableProps()} className={TABLE_TABLE_CLASSNAME}>
           <thead>
             {headerGroups.map((headerGroup, i) => (
-                <tr {...headerGroup.getHeaderGroupProps()} key={i}>
+              <tr {...headerGroup.getHeaderGroupProps()} key={i}>
                 {headerGroup.headers.map((column, i) => (
                   <th
                     // @ts-ignore TYPE NEEDS FIXING

@@ -1,6 +1,6 @@
 import { t } from '@lingui/macro'
 import { useLingui } from '@lingui/react'
-import { Token } from '@sushiswap/core-sdk'
+import { Token } from '@core-sdk'
 import Button from 'app/components/Button'
 import Chip from 'app/components/Chip'
 import { CurrencyLogo } from 'app/components/CurrencyLogo'
@@ -34,9 +34,7 @@ export const ImportToken: FC<ImportProps> = ({ tokens, onBack }) => {
       <HeadlessUiModal.Header header={i18n._(t`Trade token`)} onClose={onDismiss} onBack={onBack} />
       <HeadlessUiModal.BorderedContent className="flex flex-col gap-4 divide-y divide-gray-700 !border-yellow/40">
         <Typography variant="sm" weight={700} className="text-yellow">
-          {i18n._(
-            t`This token is the main Token of this Chain on BallSwapper. Do you want to trade?`
-          )}
+          {i18n._(t`This token is the main Token of this Chain on BallSwapper. Do you want to trade?`)}
         </Typography>
         {tokens.map((token) => {
           return (

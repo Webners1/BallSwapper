@@ -1,7 +1,7 @@
 import { BeakerIcon, GlobeIcon, SwitchVerticalIcon, TrendingUpIcon } from '@heroicons/react/outline'
 import { t } from '@lingui/macro'
 import { useLingui } from '@lingui/react'
-import { ChainId, SUSHI_ADDRESS } from '@sushiswap/core-sdk'
+import { ChainId, SUSHI_ADDRESS } from '@core-sdk'
 import { RocketIcon, WalletIcon } from 'app/components/Icon'
 import { Feature } from 'app/enums'
 import { featureEnabled } from 'app/functions'
@@ -33,7 +33,8 @@ const useMenu: UseMenu = () => {
   return useMemo(() => {
     if (!chainId) return []
 
-    const menu: Menu = [ {
+    const menu: Menu = [
+      {
         key: 'Home',
         title: i18n._(t`Home`),
         link: 'https://ballswapper.com',
@@ -47,17 +48,15 @@ const useMenu: UseMenu = () => {
         key: 'Analytics',
         title: i18n._(t`Analytics`),
         link: '/analytics',
-      }
+      },
     ]
 
     const trade = [
-     
       {
         key: 'swap',
         title: i18n._(t`Swap`),
         link: '/swap',
       },
- 
     ]
 
     const liquidity = [
@@ -100,7 +99,6 @@ const useMenu: UseMenu = () => {
             title: i18n._(t`Swap`),
             link: '/swap',
           },
-       
         ],
       })
 
@@ -133,7 +131,6 @@ const useMenu: UseMenu = () => {
       menu.push(tridentLiquidity)
 
       if (featureEnabled(Feature.AMM, chainId)) {
-     
       }
     } else {
       menu.push({
@@ -150,16 +147,6 @@ const useMenu: UseMenu = () => {
       })
     }
 
-   
-
-  
-
-
-
-
-  
-
-   
     return menu.filter((el) => Object.keys(el).length > 0)
   }, [account, chainId, i18n])
 }

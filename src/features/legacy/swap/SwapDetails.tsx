@@ -2,15 +2,7 @@ import { Disclosure, Transition } from '@headlessui/react'
 import { ChevronDownIcon, ExternalLinkIcon } from '@heroicons/react/outline'
 import { t } from '@lingui/macro'
 import { useLingui } from '@lingui/react'
-import {
-  Currency,
-  CurrencyAmount,
-  NATIVE,
-  Percent,
-  Token,
-  Trade as LegacyTrade,
-  TradeVersion,
-} from '@sushiswap/core-sdk'
+import { Currency, CurrencyAmount, NATIVE, Percent, Token, Trade as LegacyTrade, TradeVersion } from '@core-sdk'
 import { Trade as TridentTrade } from '@sushiswap/trident-sdk'
 import Chip from 'app/components/Chip'
 import Typography from 'app/components/Typography'

@@ -1,4 +1,4 @@
-import { Token } from '@sushiswap/core-sdk'
+import { Token } from '@core-sdk'
 import { useAtomValue, useUpdateAtom } from 'jotai/utils'
 import { Transaction, TransactionInfo, transactionsAtom, TransactionType } from 'lib/state/transactions'
 import ms from 'ms.macro'
@@ -30,7 +30,7 @@ export function useAddTransaction() {
       invariant(chainId)
       const txChainId = chainId
       const { hash } = info.response
-  //@ts-ignore
+      //@ts-ignore
 
       updateTxs((chainTxs) => {
         const txs = chainTxs[txChainId] || {}
@@ -55,24 +55,23 @@ export function usePendingApproval(token?: Token, spender?: string): string | un
   return Object.values(chainTxs).find(
     (tx) =>
       tx &&
-  //@ts-ignore
+      //@ts-ignore
 
       tx.receipt === undefined &&
-  //@ts-ignore
+      //@ts-ignore
 
       tx.info.type === TransactionType.APPROVAL &&
-  //@ts-ignore
+      //@ts-ignore
 
       tx.info.tokenAddress === token.address &&
-  //@ts-ignore
+      //@ts-ignore
 
       tx.info.spenderAddress === spender &&
-  //@ts-ignore
+      //@ts-ignore
 
       isTransactionRecent(tx)
-  //@ts-ignore
-
-      )?.info.response.hash
+    //@ts-ignore
+  )?.info.response.hash
 }
 
 export function TransactionsUpdater() {
@@ -81,8 +80,8 @@ export function TransactionsUpdater() {
   const updateTxs = useUpdateAtom(transactionsAtom)
   const onCheck = useCallback(
     ({ chainId, hash, blockNumber }) => {
-  //@ts-ignore
-      
+      //@ts-ignore
+
       updateTxs((txs) => {
         const tx = txs[chainId]?.[hash]
         if (tx) {
@@ -96,8 +95,8 @@ export function TransactionsUpdater() {
   )
   const onPrivateTxStatusCheck = useCallback(
     ({ chainId, hash, blockNumber, status }) => {
-  //@ts-ignore
-      
+      //@ts-ignore
+
       updateTxs((txs) => {
         const tx = txs[chainId]?.[hash]
         if (tx) {
@@ -112,8 +111,8 @@ export function TransactionsUpdater() {
   )
   const onReceipt = useCallback(
     ({ chainId, hash, receipt }) => {
-  //@ts-ignore
-      
+      //@ts-ignore
+
       updateTxs((txs) => {
         const tx = txs[chainId]?.[hash]
         if (tx) {

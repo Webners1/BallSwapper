@@ -1,4 +1,4 @@
-import { JSBI } from '@sushiswap/core-sdk'
+import { JSBI } from '@core-sdk'
 import SumUSDCValues from 'app/features/trident/SumUSDCValues'
 import { classNames } from 'app/functions'
 import { Pair } from 'app/hooks/Pair'

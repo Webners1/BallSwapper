@@ -18,7 +18,7 @@ import {
   SUSHI_ADDRESS,
   TIMELOCK_ADDRESS,
   WNATIVE_ADDRESS,
-} from '@sushiswap/core-sdk'
+} from '@core-sdk'
 import { LIMIT_ORDER_HELPER_ADDRESS, STOP_LIMIT_ORDER_ADDRESS } from '@sushiswap/limit-order-sdk'
 import MISO from '@sushiswap/miso/exports/all.json'
 import ConstantProductPoolArtifact from '@sushiswap/trident/artifacts/contracts/pool/constant-product/ConstantProductPool.sol/ConstantProductPool.json'
@@ -193,6 +193,7 @@ const MULTICALL_ADDRESS = {
   [ChainId.METIS]: '0x67dA5f2FfaDDfF067AB9d5F025F8810634d84287',
   [ChainId.ARBITRUM_NOVA]: '0x0769fd68dFb93167989C6f7254cd0D766Fb2841F',
   [ChainId.BOBA_AVAX]: '0x67dA5f2FfaDDfF067AB9d5F025F8810634d84287',
+  [7001]: '0x257ED12Bb621382696D03223CCA401185CF30Ad4',
 }
 
 export function useInterfaceMulticall(): Contract | null | undefined {
@@ -245,8 +246,8 @@ export function useRouterContract(withSignerIfPossible?: boolean): Contract | nu
       ? '0x1c78868884F83CCCcB6F760921bF038236D67993'
       : chainId == 56
       ? '0x9b9577d046cfA15d5D7cFADeB562D3f589357b73'
-      //@ts-ignore
-      : ROUTER_ADDRESS[chainId],
+      : //@ts-ignore
+        ROUTER_ADDRESS[chainId],
     ROUTER_ABI,
     withSignerIfPossible
   )

@@ -1,4 +1,4 @@
-import { ChainId, Currency, WNATIVE } from '@sushiswap/core-sdk'
+import { ChainId, Currency, WNATIVE } from '@core-sdk'
 import useHttpLocations from 'app/hooks/useHttpLocations'
 import { WrappedTokenInfo } from 'app/state/lists/wrappedTokenInfo'
 import React, { FunctionComponent, useMemo } from 'react'
@@ -77,6 +77,7 @@ const TelosLogo = 'https://raw.githubusercontent.com/sushiswap/list/master/logos
 const KavaLogo = 'https://raw.githubusercontent.com/sushiswap/list/master/logos/native-currency-logos/kava.svg'
 const MetisLogo = 'https://raw.githubusercontent.com/sushiswap/list/master/logos/native-currency-logos/metis.svg'
 const BobaLogo = 'https://raw.githubusercontent.com/sushiswap/list/master/logos/native-currency-logos/boba.svg'
+const opBNBLogo = 'https://i.ibb.co/dLHNfYf/zetachain-icon-4x.png'
 
 const LOGO: Record<number, string> = {
   [ChainId.ETHEREUM]: EthereumLogo,
@@ -114,6 +115,7 @@ const LOGO: Record<number, string> = {
   [ChainId.ARBITRUM_NOVA]: EthereumLogo,
   [ChainId.METIS]: MetisLogo,
   [ChainId.BOBA_AVAX]: BobaLogo,
+  [7001]: opBNBLogo,
 }
 
 export interface CurrencyLogoProps {
@@ -140,33 +142,50 @@ const CurrencyLogo: FunctionComponent<CurrencyLogoProps> = ({ currency, size = '
       if (currency instanceof WrappedTokenInfo) {
         return [...uriLocations, ...defaultUrls, UNKNOWN_ICON]
       }
-      if(currency.symbol == "BART"){
-        return ["https://i.imgur.com/7oFiXmg.png"]
-      }
-     
-      if(currency?.symbol == "PELO"){
-        return ["https://i.imgur.com/6A2slSh.png"]
-      }
-      if(currency?.symbol == "BSP"){
-        return ["https://res.cloudinary.com/sushi-cdn/image/fetch/f_auto,c_limit,w_32,q_auto/https://i.imgur.com/44SEwTZ.png"]
-      }
-      if(currency?.symbol == "MEMELON"){
-        return ["https://i.imgur.com/Nshz237.png"]
-      }
-      if(currency?.symbol == "BTB"){
-        return ["https://i.ibb.co/vPmV0dV/229-CA986-2-E7-D-46-C4-A5-AF-D86-A88-E0207-F.png"]
+      if (currency.symbol == 'BART') {
+        return ['https://i.imgur.com/7oFiXmg.png']
       }
 
-      if(currency?.symbol == "BTRS"){
-        return ["https://etherscan.io/token/images/bitballtreasure_32.png"]
+      if (currency?.symbol == 'PELO') {
+        return ['https://i.imgur.com/6A2slSh.png']
+      }
+      if (currency?.symbol == 'BSP') {
+        return [
+          'https://res.cloudinary.com/sushi-cdn/image/fetch/f_auto,c_limit,w_32,q_auto/https://i.imgur.com/44SEwTZ.png',
+        ]
+      }
+      if (currency?.symbol == 'MEMELON') {
+        return ['https://i.imgur.com/Nshz237.png']
+      }
+      if (currency?.symbol == 'BTB') {
+        return ['https://i.ibb.co/vPmV0dV/229-CA986-2-E7-D-46-C4-A5-AF-D86-A88-E0207-F.png']
+      }
+
+      if (currency?.symbol == 'BTRS') {
+        return ['https://etherscan.io/token/images/bitballtreasure_32.png']
+      }
+
+      if (currency?.symbol == 'WZETA') {
+        return [opBNBLogo]
+      }
+      if (currency?.symbol == 'gETH') {
+        return [EthereumLogo]
+      }
+      if (currency?.symbol == 'EMMET') {
+        return ['https://i.ibb.co/mvLQxBS/Emmet-Logo-Green.png']
+      }
+      if (currency?.name === 'ZNS Token') {
+        return ['https://i.ibb.co/rs7C7TR/ZNS-token-Logo.png']
+      }
+      if (currency?.symbol === 'ZNT') {
+        return ['https://i.ibb.co/rs7C7TR/ZNS-token-Logo.png']
       }
       return defaultUrls
     }
-   
+
     return [UNKNOWN_ICON]
   }, [currency, uriLocations])
 
-  
   return <Logo srcs={srcs} width={size} height={size} alt={currency?.symbol} className={className} style={style} />
 }
 

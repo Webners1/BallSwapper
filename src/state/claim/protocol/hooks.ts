@@ -1,6 +1,6 @@
 import { getAddress, isAddress } from '@ethersproject/address'
 import { TransactionResponse } from '@ethersproject/providers'
-import { ChainId, Currency, CurrencyAmount, JSBI, SUSHI } from '@sushiswap/core-sdk'
+import { ChainId, Currency, CurrencyAmount, JSBI, SUSHI } from '@core-sdk'
 import { PROTOCOL_MERKLE_ROOT as MERKLE_ROOT } from 'app/constants'
 import { calculateGasMargin } from 'app/functions/trade'
 import { useProtocolMerkleDistributorContract as useMerkleDistributorContract } from 'app/hooks/useContract'
@@ -32,7 +32,7 @@ function fetchClaim(account: string, chainId: ChainId): Promise<any | UserClaimD
     fetch(MERKLE_ROOT)
       .then((response) => response.json())
       .then((data) => {
-        const claim: typeof data.claims[0] | undefined = data.claims[getAddress(account)] ?? undefined
+        const claim: (typeof data.claims)[0] | undefined = data.claims[getAddress(account)] ?? undefined
         if (!claim) return null
 
         // console.log('claim:', claim)

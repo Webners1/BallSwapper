@@ -1,4 +1,4 @@
-import { NATIVE } from '@sushiswap/core-sdk'
+import { NATIVE } from '@core-sdk'
 import Container from 'app/components/Container'
 import { NAV_CLASS } from 'app/components/Header/styles'
 import useMenu from 'app/components/Header/useMenu'
@@ -39,7 +39,7 @@ const Desktop: FC = () => {
               </div>
 
               <div className="flex items-center justify-end w-auto shadow select-none whitespace-nowrap">
-          <div className="flex items-center">{<Web3Network />}</div>
+                <div className="flex items-center">{<Web3Network />}</div>
 
                 {account && chainId && (
                   <Typography weight={700} variant="sm" className="px-2 py-5 font-bold">
@@ -78,7 +78,6 @@ const Desktop: FC = () => {
             </div>
           </Container>
         </nav>
-       
       </header>
       <div style={{ height: HEADER_HEIGHT + 48, minHeight: HEADER_HEIGHT }} />
     </>

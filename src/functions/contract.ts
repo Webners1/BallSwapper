@@ -3,7 +3,7 @@
 import { AddressZero } from '@ethersproject/constants'
 import { Contract } from '@ethersproject/contracts'
 import { JsonRpcSigner, Web3Provider } from '@ethersproject/providers'
-import { ChainId, ROUTER_ADDRESS } from '@sushiswap/core-sdk'
+import { ChainId, ROUTER_ADDRESS } from '@core-sdk'
 import IUniswapV2Router02ABI from 'app/constants/abis/uniswap-v2-router-02.json'
 import IUniswapV2Router02NoETHABI from 'app/constants/abis/uniswap-v2-router-02-no-eth.json'
 import { isAddress } from 'app/functions/validate'
@@ -36,8 +36,8 @@ export function getRouterAddress(chainId?: ChainId) {
     ? '0x1c78868884F83CCCcB6F760921bF038236D67993'
     : chainId == 56
     ? '0x9b9577d046cfA15d5D7cFADeB562D3f589357b73'
-      //@ts-ignore
-    : ROUTER_ADDRESS[chainId]
+    : //@ts-ignore
+      ROUTER_ADDRESS[chainId]
 }
 
 // account is optional

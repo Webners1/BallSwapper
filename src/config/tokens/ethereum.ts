@@ -1,4 +1,4 @@
-import { ChainId, Token } from '@sushiswap/core-sdk'
+import { ChainId, Token } from '@core-sdk'
 
 // Default Ethereum chain tokens
 export const ALPHA = new Token(
@@ -20,13 +20,7 @@ export const DAI = new Token(
   'Dai Stablecoin'
 )
 
-export const BSP = new Token(
-  ChainId.ETHEREUM,
-  '0xE51b8Ab09008285a0380Dd2680cD9Dd5e13924D3',
-  18,
-  'BSP',
-  'BallSwap'
-)
+export const BSP = new Token(ChainId.ETHEREUM, '0xE51b8Ab09008285a0380Dd2680cD9Dd5e13924D3', 18, 'BSP', 'BallSwap')
 
 export const BTRS = new Token(
   ChainId.ETHEREUM,
@@ -36,13 +30,7 @@ export const BTRS = new Token(
   'BitBall Treasure'
 )
 
-export const BTB = new Token(
-  ChainId.ETHEREUM,
-  '0x06e0feB0D74106c7adA8497754074D222Ec6BCDf',
-  18,
-  'BTB',
-  'BitBall'
-)
+export const BTB = new Token(ChainId.ETHEREUM, '0x06e0feB0D74106c7adA8497754074D222Ec6BCDf', 18, 'BTB', 'BitBall')
 export const BART = new Token(
   ChainId.ETHEREUM,
   '0x21fb4dd8c500be1a9ba27f827217e477217d6225',
@@ -50,13 +38,7 @@ export const BART = new Token(
   'BART',
   'Ballswapper Accelerator Reflection Token'
 )
-export const PELO = new Token(
-  ChainId.ETHEREUM,
-  '0xb5cE43fE2fcFfFfb2EeCE95EC413d08Def28046F',
-  18,
-  'PELO',
-  'PepElon'
-)
+export const PELO = new Token(ChainId.ETHEREUM, '0xb5cE43fE2fcFfFfb2EeCE95EC413d08Def28046F', 18, 'PELO', 'PepElon')
 
 export const DOUGH = new Token(
   ChainId.ETHEREUM,
