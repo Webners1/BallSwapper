@@ -6,6 +6,7 @@ import { BENTOBOX_ADDRESS, CHAINLINK_ORACLE_ADDRESS, Currency, FACTORY_ADDRESS, 
 import { CHAINLINK_PRICE_FEED_MAP } from 'app/config/oracles/chainlink'
 import { BASES_TO_TRACK_LIQUIDITY_FOR, PINNED_PAIRS } from 'app/config/routing'
 import { e10 } from 'app/functions'
+import { ChainId, INIT_CODE_HASH, JSBI, Percent } from '@core-sdk'
 import { useAllTokens } from 'app/hooks/Tokens'
 import { useActiveWeb3React } from 'app/services/web3'
 import { AppState } from 'app/state'
@@ -180,7 +181,7 @@ export function computePairAddress({
       ? '0x75df2c56877e32c6cf5b6bae86b4df78f14dcc4566ead8468f91d83b7838b279'
       : tokenA.chainId == 137
       ? '0x75df2c56877e32c6cf5b6bae86b4df78f14dcc4566ead8468f91d83b7838b279'
-      : '0xe18a34eb0e04b04f7a0ac29a6e80748dca96319b42c54d679cb821dca90c6303'
+      : INIT_CODE_HASH[tokenA.chainId]
   )
 }
 export function toV2LiquidityToken([tokenA, tokenB]: [Token, Token]): Token {
