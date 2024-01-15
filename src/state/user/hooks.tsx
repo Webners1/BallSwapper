@@ -6,7 +6,7 @@ import { BENTOBOX_ADDRESS, CHAINLINK_ORACLE_ADDRESS, Currency, FACTORY_ADDRESS, 
 import { CHAINLINK_PRICE_FEED_MAP } from 'app/config/oracles/chainlink'
 import { BASES_TO_TRACK_LIQUIDITY_FOR, PINNED_PAIRS } from 'app/config/routing'
 import { e10 } from 'app/functions'
-import { ChainId, INIT_CODE_HASH, JSBI, Percent } from '@core-sdk'
+import { INIT_CODE_HASH } from '@core-sdk'
 import { useAllTokens } from 'app/hooks/Tokens'
 import { useActiveWeb3React } from 'app/services/web3'
 import { AppState } from 'app/state'
