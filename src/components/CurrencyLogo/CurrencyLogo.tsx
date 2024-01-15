@@ -77,7 +77,7 @@ const TelosLogo = 'https://raw.githubusercontent.com/sushiswap/list/master/logos
 const KavaLogo = 'https://raw.githubusercontent.com/sushiswap/list/master/logos/native-currency-logos/kava.svg'
 const MetisLogo = 'https://raw.githubusercontent.com/sushiswap/list/master/logos/native-currency-logos/metis.svg'
 const BobaLogo = 'https://raw.githubusercontent.com/sushiswap/list/master/logos/native-currency-logos/boba.svg'
-const opBNBLogo = 'https://i.ibb.co/dLHNfYf/zetachain-icon-4x.png'
+const ZetaLogo = 'https://i.ibb.co/dLHNfYf/zetachain-icon-4x.png'
 
 const LOGO: Record<number, string> = {
   [ChainId.ETHEREUM]: EthereumLogo,
@@ -115,7 +115,7 @@ const LOGO: Record<number, string> = {
   [ChainId.ARBITRUM_NOVA]: EthereumLogo,
   [ChainId.METIS]: MetisLogo,
   [ChainId.BOBA_AVAX]: BobaLogo,
-  [7001]: opBNBLogo,
+  [7001]: ZetaLogo,
 }
 
 export interface CurrencyLogoProps {
@@ -166,7 +166,7 @@ const CurrencyLogo: FunctionComponent<CurrencyLogoProps> = ({ currency, size = '
       }
 
       if (currency?.symbol == 'WZETA') {
-        return [opBNBLogo]
+        return [ZetaLogo]
       }
       if (currency?.symbol == 'gETH') {
         return [EthereumLogo]

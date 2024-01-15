@@ -126,10 +126,10 @@ export const SUPPORTED_NETWORKS: Record<
   },
   [7001]: {
     chainId: '0x1b59',
-    chainName: 'opBNB',
+    chainName: 'ZetaChain Athens 3 Testnet',
     nativeCurrency: {
-      name: 'BNB',
-      symbol: 'BNB',
+      name: 'ZETA',
+      symbol: 'ZETA',
       decimals: 18,
     },
     rpcUrls: ['https://zetachain-athens-evm.blockpi.network/v1/rpc/public'], // ['https://matic-mainnet.chainstacklabs.com/'],

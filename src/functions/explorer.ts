@@ -225,6 +225,10 @@ const chains: ChainObject = {
     link: 'https://blockexplorer.avax.boba.network',
     builder: explorers.blockscout,
   },
+  [7001]: {
+    link: 'https://explorer.zetachain.com/',
+    builder: explorers.etherscan,
+  },
 }
 
 export function getExplorerLink(
@@ -233,7 +237,7 @@ export function getExplorerLink(
   type: 'transaction' | 'token' | 'address' | 'block'
 ): string {
   if (!chainId) return ''
-
   const chain = chains[chainId]
+  console.log({ chain, chainId, chains }, 'chain__________')
   return chain.builder(chain.link, data, type)
 }
