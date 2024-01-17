@@ -1,6 +1,6 @@
 import { Token } from '@core-sdk'
 
-export const WETH = new Token(7001, '0x0A67e05a87b87f210277542267ABD87F9D29CB67', 18, 'WZETA', 'Wrapped ZETA')
+export const WETH = new Token(7001, '0x5f0b1a82749cb4e2278ec87f8bf6b618dc71a8bf', 18, 'WZETA', 'Wrapped ZETA')
 
 export const EMMET = new Token(7001, '0xc03B1253770a34289f8Aa44b694b190dF9bb69b8', 18, 'EMMET', 'EMMET')
 

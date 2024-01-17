@@ -176,7 +176,7 @@ export function computePairAddress({
     factoryAddress,
     keccak256(['bytes'], [pack(['address', 'address'], [token0.address, token1.address])]),
     token0.chainId == 1
-      ? '0x284105c50b630ba152d66c7cc0721c3729f56026a8d71617578311e869c253bf'
+      ? '0x6672ab79d3c47fb68fdb64f1f80dfa6f6acea5f2617185cb19f624742f60bbc9'
       : token0.chainId == 56
       ? '0x75df2c56877e32c6cf5b6bae86b4df78f14dcc4566ead8468f91d83b7838b279'
       : tokenA.chainId == 137
