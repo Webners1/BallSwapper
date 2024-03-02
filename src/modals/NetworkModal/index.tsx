@@ -124,7 +124,18 @@ export const SUPPORTED_NETWORKS: Record<
     rpcUrls: ['https://polygon-rpc.com'], // ['https://matic-mainnet.chainstacklabs.com/'],
     blockExplorerUrls: ['https://polygonscan.com'],
   },
-  [7001]: {
+  [ChainId.ZETA]: {
+    chainId: '0x1b58',
+    chainName: 'ZetaChain Mainnet',
+    nativeCurrency: {
+      name: 'ZETA',
+      symbol: 'ZETA',
+      decimals: 18,
+    },
+    rpcUrls: ['https://zetachain-evm.blockpi.network/v1/rpc/public'],
+    blockExplorerUrls: ['https://explorer.zetachain.com'],
+  },
+  [ChainId.ZETA_TESTNET]: {
     chainId: '0x1b59',
     chainName: 'ZetaChain Athens 3 Testnet',
     nativeCurrency: {
@@ -132,8 +143,8 @@ export const SUPPORTED_NETWORKS: Record<
       symbol: 'ZETA',
       decimals: 18,
     },
-    rpcUrls: ['https://zetachain-athens-evm.blockpi.network/v1/rpc/public'], // ['https://matic-mainnet.chainstacklabs.com/'],
-    blockExplorerUrls: ['https://explorer.zetachain.com/'],
+    rpcUrls: ['https://zetachain-athens-evm.blockpi.network/v1/rpc/public'],
+    blockExplorerUrls: ['https://athens.explorer.zetachain.com'],
   },
   // [ChainId.HECO]: {
   //   chainId: '0x80',
@@ -357,7 +368,8 @@ const NetworkModal: FC<{ switchNetwork: (targetChain: number) => void }> = ({ sw
             // ChainId.MOONBEAM,
             // ChainId.FUSE,
             ChainId.BSC,
-            7001,
+            ChainId.ZETA,
+            ChainId.ZETA_TESTNET,
             // ChainId.KAVA,
             // ChainId.METIS,
             // ChainId.TELOS,

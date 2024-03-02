@@ -13,6 +13,7 @@ var ChainId
   ChainId[(ChainId['ETHEREUM'] = 1)] = 'ETHEREUM'
   ChainId[(ChainId['ROPSTEN'] = 3)] = 'ROPSTEN'
   ChainId[(ChainId['RINKEBY'] = 4)] = 'RINKEBY'
+  ChainId[(ChainId['ZETA'] = 7000)] = 'ZETA'
   ChainId[(ChainId['ZETA_TESTNET'] = 7001)] = 'ZETA_TESTNET'
   ChainId[(ChainId['OPBNB'] = 204)] = 'OPBNB'
   ChainId[(ChainId['G\xD6RLI'] = 5)] = 'G\xD6RLI'
@@ -55,6 +56,7 @@ var ChainKey
   ChainKey['ARBITRUM'] = 'arbitrum'
   ChainKey['ARBITRUM_TESTNET'] = 'arbitrum-testnet'
   ChainKey['AVALANCHE'] = 'avalanche'
+  ChainKey['ZETA'] = 'zeta'
   ChainKey['ZETA_TESTNET'] = 'zeta-testnet'
   ChainKey['OPBNB'] = 'op-bnb'
   ChainKey['AVALANCHE_TESTNET'] = 'avalance-testnet'
@@ -160,6 +162,7 @@ var SUSHI_ADDRESS =
   (_SUSHI_ADDRESS[ChainId.ARBITRUM] = '0xd4d42F0b6DEF4CE0383636770eF773390d85c61A'),
   (_SUSHI_ADDRESS[ChainId.AVALANCHE] = '0x37B608519F91f70F2EeB0e5Ed9AF4061722e4F76'),
   (_SUSHI_ADDRESS[ChainId.OPBNB] = ''),
+  (_SUSHI_ADDRESS[ChainId.ZETA] = ''),
   (_SUSHI_ADDRESS[ChainId.ZETA_TESTNET] = ''),
   (_SUSHI_ADDRESS[ChainId.HECO] = '0x52E00B2dA5Bd7940fFe26B609A42F957f31118D5'),
   (_SUSHI_ADDRESS[ChainId.HARMONY] = '0xBEC775Cb42AbFa4288dE81F387a9b1A3c4Bc552A'),
@@ -233,6 +236,7 @@ var WETH9_ADDRESS =
   (_WETH9_ADDRESS[ChainId.GÖRLI] = '0xB4FBF271143F4FBf7B91A5ded31805e42b2208d6'),
   (_WETH9_ADDRESS[ChainId.KOVAN] = '0xd0A1E359811322d97991E03f863a0C30C2cF029C'),
   (_WETH9_ADDRESS[ChainId.OPBNB] = '0x4200000000000000000000000000000000000006'),
+  (_WETH9_ADDRESS[ChainId.ZETA] = '0x5f0b1a82749cb4e2278ec87f8bf6b618dc71a8bf'),
   (_WETH9_ADDRESS[ChainId.ZETA_TESTNET] = '0x5f0b1a82749cb4e2278ec87f8bf6b618dc71a8bf'),
   (_WETH9_ADDRESS[ChainId.ARBITRUM] = '0x82aF49447D8a07e3bd95BD0d56f35241523fBab1'),
   (_WETH9_ADDRESS[ChainId.ARBITRUM_TESTNET] = '0xf8456e5e6A225C2C1D74D8C9a4cB2B1d5dc1153b'),
@@ -261,6 +265,7 @@ var WNATIVE_ADDRESS =
   (_WNATIVE_ADDRESS[ChainId.ETHEREUM] = WETH9_ADDRESS[ChainId.ETHEREUM]),
   (_WNATIVE_ADDRESS[ChainId.ROPSTEN] = WETH9_ADDRESS[ChainId.ROPSTEN]),
   (_WNATIVE_ADDRESS[ChainId.OPBNB] = WETH9_ADDRESS[ChainId.OPBNB]),
+  (_WNATIVE_ADDRESS[ChainId.ZETA] = WETH9_ADDRESS[ChainId.ZETA]),
   (_WNATIVE_ADDRESS[ChainId.ZETA_TESTNET] = WETH9_ADDRESS[ChainId.ZETA_TESTNET]),
   (_WNATIVE_ADDRESS[ChainId.RINKEBY] = WETH9_ADDRESS[ChainId.RINKEBY]),
   (_WNATIVE_ADDRESS[ChainId.GÖRLI] = WETH9_ADDRESS[ChainId.GÖRLI]),
@@ -369,6 +374,7 @@ var FACTORY_ADDRESS =
   (_FACTORY_ADDRESS[ChainId.ETHEREUM] = '0xC0AEe478e3658e2610c5F7A4A2E1777cE9e4f2Ac'),
   (_FACTORY_ADDRESS[ChainId.ROPSTEN] = '0xc35DADB65012eC5796536bD9864eD8773aBc74C4'),
   (_FACTORY_ADDRESS[ChainId.RINKEBY] = '0xc35DADB65012eC5796536bD9864eD8773aBc74C4'),
+  (_FACTORY_ADDRESS[ChainId.ZETA] = '0x42af688714f1a6ceaf03ec1451d238f59c723652'),
   (_FACTORY_ADDRESS[ChainId.ZETA_TESTNET] = '0x7d744D7e73D11Ea268B286198BFdEA9067B10218'),
   (_FACTORY_ADDRESS[ChainId.GÖRLI] = '0xc35DADB65012eC5796536bD9864eD8773aBc74C4'),
   (_FACTORY_ADDRESS[ChainId.OPBNB] = '0xa7408904620F14C4FEB898c8c20c2189636d4009'),
@@ -406,6 +412,7 @@ var ROUTER_ADDRESS =
   (_ROUTER_ADDRESS[ChainId.ETHEREUM] = '0xd9e1cE17f2641f24aE83637ab66a2cca9C378B9F'),
   (_ROUTER_ADDRESS[ChainId.RINKEBY] = '0x1b02dA8Cb0d097eB8D57A175b88c7D8b47997506'),
   (_ROUTER_ADDRESS[ChainId.OPBNB] = '0xEE5128f6c8e2cdfb1e5f2A01fe470aCe680aF85c'),
+  (_ROUTER_ADDRESS[ChainId.ZETA] = '0x8225AA66609655d5D3Ca307D55d70EB908C9B198'),
   (_ROUTER_ADDRESS[ChainId.ZETA_TESTNET] = '0x5A2523b109727e439Ca0e566466f5a2915F996CA'),
   (_ROUTER_ADDRESS[ChainId.ROPSTEN] = '0x1b02dA8Cb0d097eB8D57A175b88c7D8b47997506'),
   (_ROUTER_ADDRESS[ChainId.GÖRLI] = '0x1b02dA8Cb0d097eB8D57A175b88c7D8b47997506'),
@@ -594,6 +601,7 @@ var MULTICALL2_ADDRESS =
   ((_MULTICALL2_ADDRESS = {}),
   (_MULTICALL2_ADDRESS[ChainId.ETHEREUM] = '0x5BA1e12693Dc8F9c48aAD8770482f4739bEeD696'),
   (_MULTICALL2_ADDRESS[ChainId.ROPSTEN] = '0x5BA1e12693Dc8F9c48aAD8770482f4739bEeD696'),
+  (_MULTICALL2_ADDRESS[ChainId.ZETA] = '0x1431b34DAd6c7b5A0e0E6FBe217567D2C3b54308'),
   (_MULTICALL2_ADDRESS[ChainId.ZETA_TESTNET] = '0x1431b34DAd6c7b5A0e0E6FBe217567D2C3b54308'),
   (_MULTICALL2_ADDRESS[ChainId.RINKEBY] = '0x5BA1e12693Dc8F9c48aAD8770482f4739bEeD696'),
   (_MULTICALL2_ADDRESS[ChainId.GÖRLI] = '0x5BA1e12693Dc8F9c48aAD8770482f4739bEeD696'),
@@ -648,6 +656,7 @@ var CHAIN_KEY =
   (_CHAIN_KEY[ChainId.ROPSTEN] = ChainKey.ROPSTEN),
   (_CHAIN_KEY[ChainId.RINKEBY] = ChainKey.RINKEBY),
   (_CHAIN_KEY[ChainId.OPBNB] = ChainKey.OPBNB),
+  (_CHAIN_KEY[ChainId.ZETA] = ChainKey.ZETA),
   (_CHAIN_KEY[ChainId.ZETA_TESTNET] = ChainKey.ZETA_TESTNET),
   (_CHAIN_KEY[ChainId.GÖRLI] = ChainKey.GÖRLI),
   (_CHAIN_KEY[ChainId.KOVAN] = ChainKey.KOVAN),
@@ -688,6 +697,7 @@ var INIT_CODE_HASH =
   ((_INIT_CODE_HASH = {}),
   (_INIT_CODE_HASH[ChainId.ETHEREUM] = '0xe18a34eb0e04b04f7a0ac29a6e80748dca96319b42c54d679cb821dca90c6303'),
   (_INIT_CODE_HASH[ChainId.OPBNB] = '0x1937327f8450c08e13c394fdf74a14214c38e7dd4c42f26872824e8f78e08423'),
+  (_INIT_CODE_HASH[ChainId.ZETA] = '0x6672ab79d3c47fb68fdb64f1f80dfa6f6acea5f2617185cb19f624742f60bbc9'),
   (_INIT_CODE_HASH[ChainId.ZETA_TESTNET] = '0x6672ab79d3c47fb68fdb64f1f80dfa6f6acea5f2617185cb19f624742f60bbc9'),
   (_INIT_CODE_HASH[ChainId.ROPSTEN] = '0xe18a34eb0e04b04f7a0ac29a6e80748dca96319b42c54d679cb821dca90c6303'),
   (_INIT_CODE_HASH[ChainId.RINKEBY] = '0xe18a34eb0e04b04f7a0ac29a6e80748dca96319b42c54d679cb821dca90c6303'),
@@ -1162,6 +1172,13 @@ var WETH9 =
     'WBNB',
     'Wrapped BNB'
   )),
+  (_WETH[ChainId.ZETA] = /*#__PURE__*/ new Token(
+    ChainId.ZETA,
+    WETH9_ADDRESS[ChainId.ZETA],
+    18,
+    'WZETA',
+    'Wrapped ZETA'
+  )),
   (_WETH[ChainId.ZETA_TESTNET] = /*#__PURE__*/ new Token(
     ChainId.ZETA_TESTNET,
     WETH9_ADDRESS[ChainId.ZETA_TESTNET],
@@ -1330,6 +1347,7 @@ var WNATIVE =
   (_WNATIVE[ChainId.ETHEREUM] = WETH9[ChainId.ETHEREUM]),
   (_WNATIVE[ChainId.ROPSTEN] = WETH9[ChainId.ROPSTEN]),
   (_WNATIVE[ChainId.OPBNB] = WETH9[ChainId.OPBNB]),
+  (_WNATIVE[ChainId.ZETA] = WETH9[ChainId.ZETA]),
   (_WNATIVE[ChainId.ZETA_TESTNET] = WETH9[ChainId.ZETA_TESTNET]),
   (_WNATIVE[ChainId.RINKEBY] = WETH9[ChainId.RINKEBY]),
   (_WNATIVE[ChainId.GÖRLI] = WETH9[ChainId.GÖRLI]),
@@ -2341,6 +2359,42 @@ var Boba = /*#__PURE__*/ (function (_NativeCurrency) {
 })(NativeCurrency)
 Boba._cache = {}
 
+var zeta = /*#__PURE__*/ (function (_NativeCurrency) {
+  _inheritsLoose(zeta, _NativeCurrency)
+
+  function zeta(chainId) {
+    return _NativeCurrency.call(this, chainId, 18, 'ZETA', 'ZETA') || this
+  }
+
+  zeta.onChain = function onChain(chainId) {
+    var _this$_cache$chainId
+
+    return (_this$_cache$chainId = this._cache[chainId]) != null
+      ? _this$_cache$chainId
+      : (this._cache[chainId] = new zeta(chainId))
+  }
+
+  var _proto = zeta.prototype
+
+  _proto.equals = function equals(other) {
+    return other.isNative && other.chainId === this.chainId
+  }
+
+  _createClass(zeta, [
+    {
+      key: 'wrapped',
+      get: function get() {
+        var wnative = WNATIVE[this.chainId]
+        !!!wnative ? (process.env.NODE_ENV !== 'production' ? invariant(false, 'WRAPPED') : invariant(false)) : void 0
+        return wnative
+      },
+    },
+  ])
+
+  return zeta
+})(NativeCurrency)
+zeta._cache = {}
+
 var zetaTestnet = /*#__PURE__*/ (function (_NativeCurrency) {
   _inheritsLoose(zetaTestnet, _NativeCurrency)
 
@@ -2383,6 +2437,7 @@ var NATIVE =
   (_NATIVE[ChainId.ETHEREUM] = /*#__PURE__*/ Ether.onChain(ChainId.ETHEREUM)),
   (_NATIVE[ChainId.ROPSTEN] = /*#__PURE__*/ Ether.onChain(ChainId.ROPSTEN)),
   (_NATIVE[ChainId.OPBNB] = /*#__PURE__*/ opBNB.onChain(ChainId.OPBNB)),
+  (_NATIVE[ChainId.ZETA] = /*#__PURE__*/ zetaTestnet.onChain(ChainId.ZETA)),
   (_NATIVE[ChainId.ZETA_TESTNET] = /*#__PURE__*/ zetaTestnet.onChain(ChainId.ZETA_TESTNET)),
   (_NATIVE[ChainId.RINKEBY] = /*#__PURE__*/ Ether.onChain(ChainId.RINKEBY)),
   (_NATIVE[ChainId.GÖRLI] = /*#__PURE__*/ Ether.onChain(ChainId.GÖRLI)),

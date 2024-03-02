@@ -22,7 +22,8 @@ import * as OPTIMISM from './tokens/optimism'
 import * as PALM from './tokens/palm'
 import * as TELOS from './tokens/telos'
 import * as XDAI from './tokens/xdai'
-import * as zetaTestnet from './tokens/zeta'
+import * as zeta from './tokens/zeta'
+import * as zetaTestnet from './tokens/zetaTestnet'
 
 type ChainTokenList = {
   readonly [chainId: number]: Token[]
@@ -84,7 +85,8 @@ const WRAPPED_NATIVE_ONLY: ChainTokenList = {
   [ChainId.METIS]: [WNATIVE[ChainId.METIS]],
   [ChainId.ARBITRUM_NOVA]: [WNATIVE[ChainId.ARBITRUM_NOVA]],
   [ChainId.BOBA_AVAX]: [WNATIVE[ChainId.BOBA_AVAX]],
-  [7001]: [WNATIVE[7001]],
+  [ChainId.ZETA]: [WNATIVE[ChainId.ZETA]],
+  [ChainId.ZETA_TESTNET]: [WNATIVE[ChainId.ZETA_TESTNET]],
 }
 
 // used to construct intermediary pairs for trading
@@ -706,7 +708,13 @@ export const COMMON_BASES: ChainTokenList = {
   ],
   [ChainId.BOBA_AVAX]: [...WRAPPED_NATIVE_ONLY[ChainId.BOBA_AVAX], BOBA_AVAX.AVAX],
 
-  [7001]: [...WRAPPED_NATIVE_ONLY[7001], zetaTestnet.GETH, zetaTestnet.EMMET, zetaTestnet.ZNT],
+  [ChainId.ZETA]: [...WRAPPED_NATIVE_ONLY[ChainId.ZETA], zeta.GETH, zeta.EMMET, zeta.ZNT],
+  [ChainId.ZETA_TESTNET]: [
+    ...WRAPPED_NATIVE_ONLY[ChainId.ZETA_TESTNET],
+    zetaTestnet.GETH,
+    zetaTestnet.EMMET,
+    zetaTestnet.ZNT,
+  ],
 }
 
 // used to construct the list of all pairs we consider by default in the frontend
@@ -870,7 +878,13 @@ export const BASES_TO_TRACK_LIQUIDITY_FOR: ChainTokenList = {
     ARBITRUM_NOVA.WBTC,
   ],
   [ChainId.BOBA_AVAX]: [...WRAPPED_NATIVE_ONLY[ChainId.BOBA_AVAX], BOBA_AVAX.AVAX],
-  [7001]: [...WRAPPED_NATIVE_ONLY[7001], zetaTestnet.GETH, zetaTestnet.EMMET, zetaTestnet.ZNT],
+  [ChainId.ZETA]: [...WRAPPED_NATIVE_ONLY[ChainId.ZETA], zeta.GETH, zeta.EMMET, zeta.ZNT],
+  [ChainId.ZETA_TESTNET]: [
+    ...WRAPPED_NATIVE_ONLY[ChainId.ZETA_TESTNET],
+    zetaTestnet.GETH,
+    zetaTestnet.EMMET,
+    zetaTestnet.ZNT,
+  ],
 }
 
 export const PINNED_PAIRS: { readonly [chainId: number]: [Token, Token][] } = {
