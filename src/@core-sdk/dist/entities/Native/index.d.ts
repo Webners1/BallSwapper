@@ -15,6 +15,6 @@ export { Telos } from './Telos';
 export { Glmr } from './Glmr';
 export { Kava } from './Kava';
 export { Metis } from './Metis';
-export { opBNB } from './opBNB';
 export { Boba } from './Boba';
-export { zetaTestnet } from './zetaTestnet';
+export { opBNB } from './opBNB';
+export { Zeta } from './Zeta';
