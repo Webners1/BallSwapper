@@ -36,7 +36,7 @@ const RPC = {
   [ChainId.METIS]: 'https://andromeda.metis.io/?owner=1088',
   [ChainId.ARBITRUM_NOVA]: 'https://a4ba.arbitrum.io/rpc',
   [ChainId.BOBA_AVAX]: 'https://avax.boba.network',
-  [7000]: 'https://zetachain-evm.blockpi.network/v1/rpc/public',
+  [ChainId.ZETA]: 'https://zetachain-evm.blockpi.network/v1/rpc/public',
   [ChainId.ZETA_TESTNET]: 'https://zetachain-athens-evm.blockpi.network/v1/rpc/public',
 }
 
