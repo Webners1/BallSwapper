@@ -708,7 +708,7 @@ export const COMMON_BASES: ChainTokenList = {
   ],
   [ChainId.BOBA_AVAX]: [...WRAPPED_NATIVE_ONLY[ChainId.BOBA_AVAX], BOBA_AVAX.AVAX],
 
-  [ChainId.ZETA]: [...WRAPPED_NATIVE_ONLY[ChainId.ZETA], zeta.GETH, zeta.EMMET, zeta.ZNT],
+  [ChainId.ZETA]: [...WRAPPED_NATIVE_ONLY[ChainId.ZETA], zeta.USDC],
   [ChainId.ZETA_TESTNET]: [
     ...WRAPPED_NATIVE_ONLY[ChainId.ZETA_TESTNET],
     zetaTestnet.GETH,
@@ -878,7 +878,7 @@ export const BASES_TO_TRACK_LIQUIDITY_FOR: ChainTokenList = {
     ARBITRUM_NOVA.WBTC,
   ],
   [ChainId.BOBA_AVAX]: [...WRAPPED_NATIVE_ONLY[ChainId.BOBA_AVAX], BOBA_AVAX.AVAX],
-  [ChainId.ZETA]: [...WRAPPED_NATIVE_ONLY[ChainId.ZETA], zeta.GETH, zeta.EMMET, zeta.ZNT],
+  [ChainId.ZETA]: [...WRAPPED_NATIVE_ONLY[ChainId.ZETA], zeta.USDC],
   [ChainId.ZETA_TESTNET]: [
     ...WRAPPED_NATIVE_ONLY[ChainId.ZETA_TESTNET],
     zetaTestnet.GETH,
