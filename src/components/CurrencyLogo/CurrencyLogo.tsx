@@ -115,8 +115,8 @@ const LOGO: Record<number, string> = {
   [ChainId.ARBITRUM_NOVA]: EthereumLogo,
   [ChainId.METIS]: MetisLogo,
   [ChainId.BOBA_AVAX]: BobaLogo,
-  [ChainId.ZETA]: ZetaLogo,
-  [ChainId.ZETA_TESTNET]: ZetaLogo,
+  // [ChainId.ZETA]: ZetaLogo,
+  // [ChainId.ZETA_TESTNET]: ZetaLogo,
 }
 
 export interface CurrencyLogoProps {
