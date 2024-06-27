@@ -17,13 +17,7 @@ export const BTB = new Token(ChainId.BSC, '0x374c1135911602a13ee041e6e6e848a14fa
 
 export const BSP = new Token(ChainId.BSC, '0xA7748F52273E11C0Cb2EdFa5128385453740ce20', 18, 'BSP', 'BallSwap')
 
-export const MEMELON = new Token(
-  ChainId.BSC,
-  '0x6deCAbebBA8682bBbBA42418b486E890CA099A1d',
-  18,
-  'MEMELON',
-  'MEME ELON DOGE FLOKI'
-)
+
 
 export const BTRS = new Token(ChainId.BSC, '0xc8f531700971fd1da43a52912ea53fc8da3b1b00', 18, 'BTRS', 'BitBall Treasure')
 export const BART = new Token(

@@ -59,7 +59,6 @@ export const getCurrencyLogoUrls = (currency: Currency): string[] => {
 const AvaxLogo = 'https://raw.githubusercontent.com/sushiswap/list/master/logos/native-currency-logos/avax.svg'
 const PeloLogo = 'https://i.imgur.com/6A2slSh.png'
 const BartLogo = 'https://i.imgur.com/7oFiXmg.png'
-const MemelonLogo = 'https://i.imgur.com/Nshz237.png'
 const BnbLogo = 'https://raw.githubusercontent.com/sushiswap/list/master/logos/native-currency-logos/bnb.svg'
 const EthereumLogo = 'https://raw.githubusercontent.com/sushiswap/list/master/logos/native-currency-logos/ethereum.svg'
 const FtmLogo = 'https://raw.githubusercontent.com/sushiswap/list/master/logos/native-currency-logos/ftm.svg'
@@ -154,9 +153,6 @@ const CurrencyLogo: FunctionComponent<CurrencyLogoProps> = ({ currency, size = '
         return [
           'https://res.cloudinary.com/sushi-cdn/image/fetch/f_auto,c_limit,w_32,q_auto/https://i.imgur.com/44SEwTZ.png',
         ]
-      }
-      if (currency?.symbol == 'MEMELON') {
-        return ['https://i.imgur.com/Nshz237.png']
       }
       if (currency?.symbol == 'BTB') {
         return ['https://i.ibb.co/vPmV0dV/229-CA986-2-E7-D-46-C4-A5-AF-D86-A88-E0207-F.png']

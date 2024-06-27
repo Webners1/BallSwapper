@@ -138,7 +138,6 @@ export const BASES_TO_CHECK_TRADES_AGAINST: ChainTokenList = {
     MATIC.DAI,
     MATIC.WETH,
     MATIC.BART,
-    MATIC.MEMELON,
     MATIC.USDT,
     MATIC.MIM,
     MATIC.FRAX,
@@ -169,7 +168,6 @@ export const BASES_TO_CHECK_TRADES_AGAINST: ChainTokenList = {
     BSC.BART,
     BSC.USD,
     BSC.MIM,
-    BSC.MEMELON,
     BSC.BTRS,
 
     BSC.USDC,
@@ -325,7 +323,6 @@ export const ADDITIONAL_BASES: {
     [MATIC.DRAX.address]: [MATIC.DMAGIC],
     [MATIC.MIM.address]: [MATIC.DMAGIC],
     [MATIC.BCT.address]: [MATIC.KLIMA],
-    [MATIC.MEMELON.address]: [MATIC.KLIMA],
     [MATIC.KLIMA.address]: [MATIC.BCT],
     [MATIC.BART.address]: [MATIC.BCT],
     //[MATIC.DMAGIC.address]: [MATIC.DRAX, MATIC.AXMATIC],
@@ -425,7 +422,6 @@ export const COMMON_BASES: ChainTokenList = {
     // @ts-ignore TYPE NEEDS FIXING
     MATIC.BART,
     // @ts-ignore TYPE NEEDS FIXING
-    MATIC.MEMELON,
     // @ts-ignore TYPE NEEDS FIXING
     MATIC.WBTC,
     // @ts-ignore TYPE NEEDS FIXING
@@ -488,7 +484,6 @@ export const COMMON_BASES: ChainTokenList = {
     BSC.DAI,
     // @ts-ignore TYPE NEEDS FIXING
 
-    BSC.MEMELON,
     // @ts-ignore TYPE NEEDS FIXING
     BSC.BTRS,
 
@@ -740,7 +735,6 @@ export const BASES_TO_TRACK_LIQUIDITY_FOR: ChainTokenList = {
     MATIC.USDC,
     MATIC.WBTC,
     MATIC.MIM,
-    MATIC.MEMELON,
     MATIC.BART,
     MATIC.DAI,
     MATIC.WETH,
