@@ -1,4 +1,4 @@
 import { ChainId, Token } from '@core-sdk'
 
-export const WETH = new Token(ChainId.ZETA, '0x5f0b1a82749cb4e2278ec87f8bf6b618dc71a8bf', 18, 'WZETA', 'Wrapped ZETA')
-export const USDC = new Token(ChainId.ZETA, '0x05BA149A7bd6dC1F937fA9046A9e05C05f3b18b0', 18, 'USDC', 'USDC')
+export const WETH = new Token(ChainId.BASE, '0x4200000000000000000000000000000000000006', 18, 'WETH', 'Wrapped ETH')
+export const USDC = new Token(ChainId.BASE, '0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913', 18, 'USDC', 'USDC')

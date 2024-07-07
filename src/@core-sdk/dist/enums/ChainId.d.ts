@@ -2,6 +2,7 @@ export declare enum ChainId {
     ETHEREUM = 1,
     ROPSTEN = 3,
     RINKEBY = 4,
+    BASE = 8453,
     GÖRLI = 5,
     KOVAN = 42,
     MATIC = 137,
@@ -36,6 +37,5 @@ export declare enum ChainId {
     ARBITRUM_NOVA = 42170,
     BOBA_AVAX = 43288,
     OPBNB = 204,
-    ZETA = 7000,
     ZETA_TESTNET = 7001
 }

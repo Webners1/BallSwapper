@@ -35,6 +35,6 @@ export declare enum ChainKey {
     ARBITRUM_NOVA = "arbitrum-nova",
     BOBA_AVAX = "boba-avax",
     OPBNB = "op-bnb",
-    ZETA = "zeta",
+    ETH = "zeta",
     ZETA_TESTNET = "zeta-testnet"
 }
